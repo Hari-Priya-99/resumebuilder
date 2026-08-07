@@ -1,68 +1,35 @@
-import { Box, Container, Typography } from '@mui/material'
+import { Box, Typography, Button } from '@mui/material'
 import React from 'react'
+import { Link } from 'react-router-dom'
+import { MdArrowBack } from 'react-icons/md'
 
 const History = () => {
   return (
-    <Container maxWidth="lg" sx={{ mb: 5 }}>
-      
-      <Typography
-        variant="h3"
-        component="h1"
-        align="center"
-        sx={{ my: 5, fontWeight: 'bold' }}
-      >
-        What's AI rBuilder
-      </Typography>
+    <Box className="container mx-auto px-4 py-10 max-w-6xl min-h-[70vh]">
+      <Box className="flex flex-col sm:flex-row my-6 justify-between items-start sm:items-center gap-3">
+        <Typography variant="h4" component="h1" sx={{ fontWeight: 700 }}>
+          Downloaded Resume History
+        </Typography>
+        <Button
+          component={Link}
+          to="/"
+          startIcon={<MdArrowBack />}
+          sx={{ color: '#9b7856', textTransform: 'none', fontWeight: 600 }}
+        >
+          Back
+        </Button>
+      </Box>
 
-     
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-        
-      
-        <div className="lg:col-span-5 lg:col-start-2 flex flex-col gap-4">
-          <Typography color="text.secondary">
-            An AI rBuilder is a web application that helps users create professional
-            resumes quickly and efficiently using artificial intelligence. Traditional
-            resume creation can be time-consuming and difficult, especially for freshers
-            who may not know the correct format or keywords required for modern recruitment systems.
-          </Typography>
-
-          <Typography color="text.secondary">
-            The system can suggest job-specific keywords, professional summaries, and
-            skill recommendations to make the resume more effective and ATS
-            (Applicant Tracking System) friendly.
-          </Typography>
-
-          <Typography color="text.secondary">
-            The main goal of the AI rBuilder is to simplify the resume creation
-            process and help job seekers build professional, well-structured resumes
-            in a few minutes. Users can edit content, preview their resume, and
-            download it in formats such as PDF.
-          </Typography>
-
-          <Typography color="text.secondary">
-            This type of system is especially useful for students &amp; fresh
-            graduates, who want to create high-quality resumes that increase their
-            chances of getting shortlisted for job interviews.
-          </Typography>
-        </div>
-
-       
-        <div className="lg:col-span-5 lg:col-start-8">
-          <Box
-            component="img"
-            src="/resume.png"
-            alt="resume"
-            sx={{
-              width: '100%',
-              height: '500px',
-              objectFit: 'cover',
-              borderRadius: '12px',
-            }}
-          />
-        </div>
-
-      </div>
-    </Container>
+      <Box className="text-center my-16">
+        <Typography
+          variant="h6"
+          component="p"
+          sx={{ fontWeight: 700, color: 'text.secondary' }}
+        >
+          No Resumes are downloaded yet!!!....
+        </Typography>
+      </Box>
+    </Box>
   )
 }
 

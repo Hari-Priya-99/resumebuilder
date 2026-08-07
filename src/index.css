@@ -1,2 +1,9 @@
 @import "tailwindcss";
 
+html {
+  font-family: "Jost", "Open Sans", system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+}

@@ -1,34 +1,51 @@
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, Button, Tooltip } from '@mui/material'
 import React from 'react'
-import { MdOutlineFindInPage } from "react-icons/md";
-import { Link } from 'react-router-dom';
-import History from '../Pages/History';
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
+import { MdOutlineFindInPage } from 'react-icons/md'
+import { Link } from 'react-router-dom'
+
+const aboutTooltip =
+  "An AI rBuilder suggests job-specific keywords, professional summaries, and skill recommendations to make the resume more effective and ATS (Applicant Tracking System) friendly. The main goal of the AI Powered Resume Builder is to simplify the resume creation process and help job seekers build professional, well-structured resumes in a few minutes. Users can select templates, edit content, preview their resume, and download it in formats such as PDF."
 
 const Header = () => {
   return (
-    <Box className='bg-[#12283d] p-3 text-white flex justify-between' >
-    <Box className='flex gap-4 items-center'>
-        <MdOutlineFindInPage className='text-3xl' />
-        <Typography variant='h5' component={'h5'}>Resume Builder</Typography>
-    </Box>
-    <Box>
-       <Tooltip title="An AI rBuilder suggest job-specific keywords, professional summaries, and skill recommendations to make the resume more effective and ATS (Applicant Tracking System) friendly. The main goal of the AI Powered Resume Builder is to simplify the resume creation process and help job seekers build professional, well-structured resumes in a few minutes. Users can select templates, edit content, preview their resume, and download it in formats such as PDF." placement="bottom-start">
-           
-          <Button style={{color:"bisque"}}>HISTORY</Button>
-        
+    <Box
+      className="flex justify-between items-center px-4 py-3 text-white"
+      sx={{ backgroundColor: '#9b7856' }}
+    >
+      <Box
+        component={Link}
+        to="/"
+        className="flex gap-3 items-center no-underline text-white"
+        sx={{ textDecoration: 'none', color: 'inherit' }}
+      >
+        <MdOutlineFindInPage className="text-3xl" />
+        <Typography variant="h5" component="h1" sx={{ fontWeight: 600 }}>
+          Resume Builder
+        </Typography>
+      </Box>
+
+      <Box className="flex items-center gap-1">
+        <Tooltip title={aboutTooltip} placement="bottom-start">
+          <Button
+            component={Link}
+            to="/history"
+            sx={{ color: 'bisque', textTransform: 'uppercase', fontWeight: 600 }}
+          >
+            History
+          </Button>
         </Tooltip>
-        
-          <Tooltip title="An AI rBuilder suggest job-specific keywords, professional summaries, and skill recommendations to make the resume more effective and ATS (Applicant Tracking System) friendly. The main goal of the AI Powered Resume Builder is to simplify the resume creation process and help job seekers build professional, well-structured resumes in a few minutes. Users can select templates, edit content, preview their resume, and download it in formats such as PDF." placement="bottom-start">
-           
-          <Button style={{color:"bisque"}}>ABOUT</Button>
-        
+
+        <Tooltip title={aboutTooltip} placement="bottom-start">
+          <Button
+            component={Link}
+            to="/#about"
+            sx={{ color: 'bisque', textTransform: 'uppercase', fontWeight: 600 }}
+          >
+            About Us
+          </Button>
         </Tooltip>
+      </Box>
     </Box>
-  
-    </Box>
-    
   )
 }
 

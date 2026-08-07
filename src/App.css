@@ -1,17 +1,18 @@
-#Home-div{
-    background: url(./src/assets/resume.png);
-    height: 100vh;
-    width: 100%;
-    background-size:cover;
-    background-position: center; 
+/* Layout helpers — backgrounds for hero are set inline via imported assets in Home.jsx */
+
+#Footer-div a:hover {
+  opacity: 0.85;
 }
-#History-div {
-  background: url(./src/assets/homeBg2.jpg); /* Replace with your second image path */
+
+/* Soft page background so form/history cards stand out */
+body {
+  margin: 0;
   min-height: 100vh;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
+  background-color: #f7f5f2;
 }
-#Footer-div{
-    background-color: rgb(156, 121, 86);
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
