@@ -1,0 +1,17 @@
+#Home-div{
+    background: url(./src/assets/resume.png);
+    height: 100vh;
+    width: 100%;
+    background-size:cover;
+    background-position: center; 
+}
+#History-div {
+  background: url(./src/assets/homeBg2.jpg); /* Replace with your second image path */
+  min-height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+#Footer-div{
+    background-color: rgb(156, 121, 86);
+}
